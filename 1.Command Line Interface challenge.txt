@@ -1,0 +1,58 @@
+cat > sample.txt
+
+$ echo "1" number.txt
+1 number.txt
+$ echo "1"> number.txt
+$ echo "2">> number.txt
+$ echo "3">> number.txt
+$ echo "4">> number.txt
+$ cat number.txt
+1
+2
+3
+4
+Users-MBP:~ user2.216512$ 
+
+
+
+
+How do I create a hidden file or folder? How do I display it in the CLI?
+
+
+Users-MBP:~ user2.216512$ cd desktop
+Users-MBP:desktop user2.216512$ pwd
+/Users/user2.216512/desktop
+Users-MBP:desktop user2.216512$ cd .hiddenfolder
+-bash: cd: .hiddenfolder: No such file or directory
+Users-MBP:desktop user2.216512$ mkdir .secret
+Users-MBP:desktop user2.216512$ cd .secret
+Users-MBP:.secret user2.216512$ pwd
+/Users/user2.216512/desktop/.secret
+Users-MBP:.secret user2.216512$ TRUE; killall Finder
+Users-MBP:.secret user2.216512$ FALSE; killall Finder
+
+How do I display it in the CLI?
+
+ls -ld .?* 
+-l     use a long listing format
+
+ -dory entries instead of contents, and do not derefer‐
+              ence symbolic links
+
+.?* will only state hidden files 
+
+How do I create multiple nested directories, like /c/Users/myusername/these/folders/are/just/for/fun?
+
+Users-MBP:.secret user2.216512$ mkdir a
+Users-MBP:.secret user2.216512$ cd a
+Users-MBP:a user2.216512$ mkdir b
+Users-MBP:a user2.216512$ cd b
+Users-MBP:b user2.216512$ mkdir c
+Users-MBP:b user2.216512$ cd c
+Users-MBP:c user2.216512$ mkdir d
+Users-MBP:c user2.216512$ cd d
+Users-MBP:d user2.216512$ pwd
+/Users/user2.216512/desktop/.secret/a/b/c/d
+
+
+
